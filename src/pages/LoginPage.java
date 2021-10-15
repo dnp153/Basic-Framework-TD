@@ -26,22 +26,22 @@ public class LoginPage {
 	public WebElement errorMessage;
 	
 	public void openBrowser() throws IOException {
-		FileInputStream fin = new FileInputStream("C:\\Users\\dnp15\\OneDrive\\Desktop\\QA_Training\\prop.properties");
+		FileInputStream fin = new FileInputStream("C:\\Users\\dnp15\\OneDrive\\Desktop\\QA\\prop.properties");
 		Properties prop = new Properties();
 		prop.load(fin);
 		String browser = prop.getProperty("browser");
 
 		if (browser.equals("edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA_Training\\SeleniumJars\\msedgedriver.exe");
+					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA\\SeleniumJars\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		} else if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA_Training\\SeleniumJars\\geckodriver.exe");
+					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA\\SeleniumJars\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA_Training\\SeleniumJars\\chromedriver.exe");
+					"C:\\Users\\dnp15\\OneDrive\\Desktop\\QA\\SeleniumJars\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		PageFactory.initElements(driver, this);
