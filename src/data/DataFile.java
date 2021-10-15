@@ -4,7 +4,7 @@ import utilities.Xls_Reader;
 
 public class DataFile {
 	
-Xls_Reader r = new Xls_Reader("C:\\Users\\dnp15\\OneDrive\\Desktop\\QA_Training\\DataForBasic.xlsx");
+Xls_Reader r = new Xls_Reader("C:\\Users\\dnp15\\OneDrive\\Desktop\\QA\\DataForBasic.xlsx");
 	
 	public String wrongUserName = r.getCellData("Sheet1", 0, 4);
 	public String wrongPassword = r.getCellData("Sheet1", 1, 4);
